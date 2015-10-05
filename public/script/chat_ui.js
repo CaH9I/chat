@@ -50,7 +50,7 @@ angular.module('chatApp', [])
   }
   
   $scope.send = function($event) {
-    $event && $event.preventDefault(); //prevents default action of Enter key after emitting message
+    $event && $event.preventDefault(); //prevents default action of Enter key before emitting message
     if ($scope.currentMessage.trim() === '') {
       $scope.currentMessage = '';
       return;
