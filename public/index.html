@@ -10,11 +10,11 @@
 	</head>
 	<body ng-app="chatApp">
 		<div id="container" ng-controller="ChatController">
-			<div class="chat_header">Онлайн чат 
+			<div class="chat_header">Online chat 
 				<span own-name ng-click="toggleForm()"></span>
 				<form id="name_attempt" ng-show="isFormOpen" ng-submit="changeName(newName)">
-					<label>Новое имя: <input ng-model="newName"/></label>
-					<br/><button>Подтвердить</button>
+					<label>New name: <input ng-model="newName"/></label>
+					<br/><button>Submit</button>
 					<span class="error" ng-bind="error"></span>
 				</form>
 			</div>
@@ -26,7 +26,7 @@
 				<textarea rows="3" placeholder="Введите сообщение" ng-model="currentMessage" 
 					ng-trim="false" ng-keypress="$event.keyCode === 13 && send($event)">
 				</textarea>
-				<br/><button ng-click="send()">Отправить</button>
+				<br/><button ng-click="send()">Send</button>
 			</div>
 		</div>
 		<script src="/socket.io/socket.io.js"></script>
